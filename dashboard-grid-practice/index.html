@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid Dashboard</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            display: grid;
+            grid-template-rows: 80px auto 60px ;
+            grid-template-columns: 250px auto;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+                height: 100vh;
+                gap: 15px;
+                padding: 15px;
+                background: linear-gradient(135deg,#ff9a9a, hsl(249, 54%, 34%) );
+        }
+        header{
+            grid-area: header;
+            background: #81fcb0;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        aside{
+            grid-area: sidebar;
+            background: #e5fc81;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        aside ul{
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li{
+            padding: 10px;
+            margin: 10px ;
+            background: #3f92ff;
+            border-radius: 20px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+            grid-template-rows: 200px 200px ;
+            grid-gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) ;
+            overflow-y: auto;
+        }
+        .card{
+            background: #0fa887;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #222;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, rotate 0.3s ;
+            cursor: pointer;
+            justify-content: center;
+        }
+        .card:hover{
+            transform: scale(1.1) rotate(2deg);
+            background: #d663a6;
+        }
+        footer{
+            grid-area: footer;
+            background:#f8734a; 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <header>Funky Dashboard 🎉</header>
+    <aside>
+        <h2>✨ Navigation ✨</h2>
+        <ul>
+            <li>🌟 Home</li>
+            <li>🎭 About</li>
+            <li>🚀 Services</li>
+            <li>🎨 Portfolio</li>
+            <li>📞 Contact</li>
+        </ul>
+    </aside>
+    <main>
+        <div class="card">🎉 Welcome to the fun side!</div>
+        <div class="card">🔥 Latest News: Big Things Coming!</div>
+        <div class="card">💼 Projects: Check Out Our Work</div>
+        <div class="card">🎤 Team: Meet the Legends</div>
+        <div class="card">💬 Support: Need a Hand?</div>
+    </main>
+    <footer>🌈 &copy; 2025 Funky Dashboard. Keep it Groovy! ✨</footer>
+
+</body>
+</html>

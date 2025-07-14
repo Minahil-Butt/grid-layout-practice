@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID uncle</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: white;
+        height: 100vh;
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 120px 150px auto 200px;
+        background: linear-gradient(135deg, rgb(4, 4, 61), rgb(129, 129, 241));
+      }
+      h1{
+        display: flex;
+        background:rgb(136, 136, 216) ;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 20px;
+      }
+      .flex-container{
+        display: flex;
+        background: rgba(255, 255, 255, 0.1);
+        justify-content: space-around;
+        gap: 20%;
+        text-align: center;        ;
+      }
+      .flex-item{
+       background: rgb(180, 118, 165);
+       text-align: center;
+       justify-content: center;
+       padding: 5vw;
+       font-size: 2vw;
+       border-radius: 20px;
+      flex: 1;
+      font-weight: bold;
+      text-align: center;margin: 10px; 
+      }
+      .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            border-radius: 15px;
+        }
+
+        .grid-item {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .subgrid-container {
+            display: grid;
+            grid-template-columns: subgrid;
+            gap: 10px;
+        }
+
+        .subgrid-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .multi-column {
+            column-count: 5;
+            column-gap: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .multi-column p {
+            padding: 10px;
+            background: linear-gradient(135deg, #03a9f4, #00bcd4);
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+
+    <h1>Modern Layout Techniques</h1>
+
+    <!-- Flexbox Layout -->
+    <div class="flex-container">
+      <div class="flex-item">Flexbox 1</div>
+      <div class="flex-item">Flexbox 2</div>
+      <div class="flex-item">Flexbox 3</div>
+    </div>
+
+    <!-- CSS Grid Layout -->
+    <div class="grid-container">
+      <div class="grid-item">Grid Area 1</div>
+      <div class="subgrid-container">
+        <div class="subgrid-item">Subgrid A</div>
+        <div class="subgrid-item">Subgrid B</div>
+      </div>
+    </div>
+
+    <!-- Multi-Column Layout -->
+    <div class="glass multi-column">
+      <p>Column 1: Beautiful layouts made easy!</p>
+      <p>Column 2: Enjoy modern web techniques!</p>
+      <p>Column 3: CSS powers creative designs!</p>
+      <p>Column 4: Multi-column styling in action!</p>
+      <p>Column 5: CSS makes the web better!</p>
+    </div>
+  </body>
+</html>

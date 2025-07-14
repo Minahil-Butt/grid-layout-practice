@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(135deg,rgb(106, 106, 250),pink);
+            height: 100vh;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            display: grid;
+            grid-template-columns:200px auto 200px ;
+            grid-template-rows: 100px auto 100px;
+            gap: 20px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar main section"
+            "footer footer footer";
+
+        }
+        header{
+            grid-area: header;
+            display: flex;
+            background-color: rgb(146, 190, 176);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            word-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            box-shadow: 0 3px 9px rgb(51, 51, 51);
+        }
+        aside{
+            display: flex;
+            flex-direction: column;
+            grid-area: sidebar;
+            background-color: rgb(223, 223, 187);
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgb(53, 53, 53);
+            color: #333;
+        }
+        .nested-grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+        }
+        .nested-item{
+            margin-top: 20px;
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        main{
+            display: grid;
+            grid-area: main;
+            background: rgb(223, 223, 187);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgb(53, 53, 53);
+            gap: 10px;
+            padding: 10px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+        }
+        .box{
+            background: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .overlap{
+            grid-column: span 2;
+            grid-row: span 2;
+            background: #666666;
+            border-radius: 20px;
+            padding: 25px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            grid-area: section;
+            background:  rgb(223, 223, 187);
+            border-radius: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgb(53, 53, 53);
+        }
+        footer{
+            grid-area: footer;
+            display: flex;
+            background-color: rgb(146, 190, 176);
+            color: white;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            word-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            box-shadow: 0 3px 9px rgb(51, 51, 51);    
+        }
+
+    </style>
+</head>
+<body>
+    <header>Advanced Grid Layout 🚀</header>
+    <aside>
+        <h2>Sidebar Menu</h2>
+        <div class="nested-grid">
+            <div class="nested-item">🔹 Link 1</div>
+            <div class="nested-item">🔹 Link 2</div>
+            <div class="nested-item">🔹 Link 3</div>
+            <div class="nested-item">🔹 Link 4</div>
+        </div>
+    </aside>
+    <main>
+        <div class="box">📌 Item 1</div>
+        <div class="box">📌 Item 2</div>
+        <div class="box">📌 Item 3</div>
+        <div class="overlap">🔥 Overlapping Box</div>
+        <div class="box">📌 Item 4</div>
+        <div class="box">📌 Item 5</div>
+    </main>
+    <section class="content">💡 Extra Content Area</section>
+    <footer>🌟 Footer Area - Practice Makes Perfect! 🌟</footer>
+</body>
+</html>
